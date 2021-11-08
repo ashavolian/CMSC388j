@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/">&lt&lt back to index<br></a>
+<b>{{poke_info.name}}</b>
+	<ul> 
+		<li>height: {{poke_info.height}} </li>
+		<li>weight: {{poke_info.weight}} </li>
+		<li>base_exp: {{poke_info.base_exp}} </li>
+		<li>moves: 
+			<ul>
+				{%for move in poke_info.moves%} 
+					<li>{{move}}</li>
+				{%endfor%}
+			</ul>
+		</li>
+		<li>abilities:
+			<ul>
+				{%for ability in poke_info.abilities%}
+					<li><a href="/ability/{{ability}}">{{ability}}</a></li>
+				{%endfor%}
+			</ul>
+		 {{poke_info.abilities}} </li>
+	</ul>
+{% endblock %}

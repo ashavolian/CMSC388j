@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="/">&lt&lt back to index<br></a>
+<b>Pokemon with {{ability}}:</b>
+{%for pokemon in pokemon_list%}
+	<ul>
+		<li><a href="/pokemon/{{pokemon}}">{{pokemon}}</a></li>
+	</ul>
+{%endfor%}
+{% endblock %}

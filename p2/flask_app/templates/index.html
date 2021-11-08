@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<b>Poke-Info website!</b>
+<ul>
+	{%for pokemon in poke_list%} 
+		<li><a href="/pokemon/{{pokemon}}">{{pokemon}}</a></li>
+	{%endfor%}
+</ul>
+{% endblock %}
+
